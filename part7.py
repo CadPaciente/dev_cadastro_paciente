@@ -36,7 +36,7 @@ class Funcoes():
         self.entry_tipo.delete(0, END)
 
         self.entry_idade = Label(self.root, bg=self.lb_bg)
-        self.entry_idade.place(x=953, y=160, width=75, height=27)
+        self.entry_idade.place(x=953, y=160, width=75, height=28)
 
     def db_conect(self):
         self.conexao = sqlite3.connect('clientes2_db.sqlite3')
