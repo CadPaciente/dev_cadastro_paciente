@@ -168,6 +168,7 @@ class principal(Funcoes):
 
         self.entry_anos = Entry()
         self.entry_anos.place()
+
 # Data Local
         self.dia_atual = (datetime.today().strftime('Goiânia, %d de %B de %Y'))
         self.hj = Label(self.root, text=f'{self.dia_atual}', bg=self.lb_bg, fg=self.lb_fg, font=('arail', 10, 'bold'))
