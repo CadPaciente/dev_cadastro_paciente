@@ -122,7 +122,6 @@ class principal(Funcoes):
         self.entry_tipo = Entry(self.root, bg=self.lb_bg, fg='#ffffff', text=f'{self.lbrevisao1}', font=('arial', 18, 'bold'), relief=FLAT)
         self.entry_tipo.place(x=720, y=380, width=120, height=25)
 
-
     def btConsulta(self):
         self.entry_tipo.destroy()
 
