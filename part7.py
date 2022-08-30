@@ -443,6 +443,7 @@ class principal(Funcoes):
 
         self.lbagenda = Label(self.root, text='AGENDAMENTO', bg=self.lb_bg, fg=self.lb_fg, font=('arial', 10, 'bold'))
         self.lbagenda.place(x=975, y=700)
+
 # Data Formatada
     def format_data(self, event=None):
         self.text = self.entry_nascimento.get()[:10]
