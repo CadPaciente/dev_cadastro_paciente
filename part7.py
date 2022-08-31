@@ -90,7 +90,7 @@ class Funcoes():
 
         self.db_conect()
         self.cursor.execute("""INSERT INTO clientes (nome,civil,religiao,profissao,cidade,estado,telefone,data,nascimento,idade,tipo,observacao,receita)
-        VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?) """, (self.nome, self.civil, self.religiao, self.profissao, self.cidade, self.estado, self.telefone, self.data,        self.nascimento, self.idade, self.tipo, self.observacao, self.receita))
+        VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?) """, (self.nome, self.civil, self.religiao, self.profissao, self.cidade, self.estado, self.telefone, self.data, self.nascimento, self.idade, self.tipo, self.observacao, self.receita))
 
         self.conexao.commit()
         self.db_desconect()
