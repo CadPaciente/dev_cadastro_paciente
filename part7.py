@@ -15,7 +15,7 @@ import sys
 import base64
 
 root = Tk()
-print()
+
 
 class Funcoes():
 
