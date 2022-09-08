@@ -1,0 +1,263 @@
+Index: part8.py
+===================================================================
+diff --git a/part8.py b/part8.py
+--- a/part8.py	
++++ b/part8.py	
+@@ -1,5 +1,4 @@
+ '''
+-CONTINUAR COM AS FUNÇÕES DO BANCO DE DADOS, NA FUNÇÃO INSERIR, COLOCAR MENSAGEM.
+ '''
+ 
+ from tkinter import *
+@@ -18,118 +17,6 @@
+ 
+ class Funcoes():
+ 
+-    def limpar_campos(self):
+-        self.entry_codigo.delete(0, END)
+-        self.entry_nome.delete(0, END)
+-        self.entry_nascimento.delete(0, END)
+-        self.entry_civil.delete(0, END)
+-        self.entry_religiao.delete(0, END)
+-        self.entry_profissao.delete(0, END)
+-        self.entry_cidade.delete(0, END)
+-        self.entry_estado.delete(0, END)
+-        self.entry_dataConsulta.delete(0, END)
+-        self.entry_observacao.delete('1.0', END)
+-        self.entry_receita.delete('1.0', END)
+-        self.entry_anos.delete(0, END)
+-        self.entry_telefone.delete(0, END)
+-        self.entry_tipo.delete(0, END)
+-
+-        self.entry_idade = Label(self.root, bg=self.lb_bg)
+-        self.entry_idade.place(x=953, y=160, width=75, height=28)
+-
+-    def db_conect(self):
+-        self.conexao = sqlite3.connect('clientes2_db.sqlite3')
+-        self.cursor = self.conexao.cursor()
+-
+-    def db_desconect(self):
+-        self.conexao.close()
+-
+-    def criar_tabela(self):
+-        self.db_conect()
+-
+-        self.cursor.execute("""
+-        CREATE TABLE IF NOT EXISTS clientes (
+-        id INTEGER PRIMARY KEY AUTOINCREMENT,
+-        Nome TEXT NOT NULL,
+-        civil TEXT NOT NULL,
+-        religiao TEXT NOT NULL,
+-        profissao TEXT NOT NULL,
+-        cidade TEXT NOT NULL,
+-        estado TEXT NOT NULL,
+-        telefone TEXT,
+-        data TEXT,
+-        nascimento TEXT NOT NULL,
+-        idade TEXT,
+-        tipo TEXT,
+-        observacao TEXT NOT NULL,
+-        receita TEXT
+-        );""");
+-
+-        self.conexao.commit()
+-        self.db_desconect()
+-
+-    def capturar_campos(self):
+-        self.codigo = self.entry_codigo.get()
+-        self.nome = self.entry_nome.get()
+-        self.civil = self.entry_civil.get()
+-        self.religiao = self.entry_religiao.get()
+-        self.profissao = self.entry_profissao.get()
+-        self.cidade = self.entry_cidade.get()
+-        self.estado = self.entry_estado.get()
+-        self.telefone = self.entry_telefone.get()
+-        self.data = self.entry_dataConsulta.get()
+-        self.nascimento = self.entry_nascimento.get()
+-        self.tipo = self.entry_tipo.get()
+-        self.observacao = self.entry_observacao.get('1.0', END)
+-        self.receita = self.entry_receita.get('1.0', END)
+-
+-    def pesquisar(self):
+-        self.db_conect()
+-        self.lista_grid.delete(*self.lista_grid.get_children())
+-
+-        nome = '%' + self.entry_nome.get()
+-
+-        self.cursor.execute("""SELECT DISTINCT * FROM clientes WHERE NOME LIKE '%s' COLLATE NOCASE ORDER BY Nome ASC""" % nome)
+-        Resultado_busca = self.cursor.fetchmany()
+-        self.limpar_campos()
+-
+-        for self.cliente in Resultado_busca:
+-            self.lista_grid.insert("", END, values=self.cliente)
+-            self.db_desconect()
+-
+-            if Resultado_busca != False:
+-                self.db_desconect()
+-                self.limpar_campos()
+-
+-    def inserir_dados(self):
+-        self.capturar_campos()
+-        self.db_conect()
+-
+-        if self.entry_nome.get() == '':
+-            msg = 'É necessário preencher o campo Nome'
+-            messagebox.showinfo('Cadastro de Paciente', msg)
+-
+-        elif self.entry_nascimento.get() == '':
+-            msg = 'É necessário preencher o campo data de nascimento'
+-            messagebox.showinfo('Cadastro de Paciente', msg)
+-
+-        else:
+-            try:
+-                self.db_conect()
+-                self.cursor.execute("""INSERT INTO clientes (nome,civil,religiao,profissao,cidade,estado,telefone,data,nascimento,idade,tipo,observacao,receita)
+-                VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?) """, (self.nome, self.civil, self.religiao, self.profissao, self.cidade, self.estado, self.telefone, self.data,        self.nascimento, self.idade, self.tipo, self.observacao, self.receita))
+-
+-                self.conexao.commit()
+-                self.db_desconect()
+-                self.limpar_campos()
+-
+-                msg = 'CADASTRO REALIZADO COM SUCESSO'
+-                messagebox.showinfo('Cadastro de Paciente', msg)
+-            except:
+-                msg = 'NECESSÁRIO CLICAR NO BOTÃO NASCIMENTO'
+-                messagebox.showinfo('Cadastro de Paciente', msg)
+-
+-
+ class principal(Funcoes):
+     def __init__(self):
+         self.root = root
+@@ -426,7 +313,7 @@
+         self.bt_buscar1.image = self.bt_buscar
+ 
+         self.bt_buscar = Button(self.root, bg=self.bt_bg, fg=self.bt_fg, image=self.bt_buscar,
+-                                activebackground=self.bt_bg, bd=0, highlightthickness=0, command=self.pesquisar, relief=FLAT)
++                                activebackground=self.bt_bg, bd=0, highlightthickness=0, command='', relief=FLAT)
+         self.bt_buscar.place(x=365, y=605, width=110, height=120)
+ 
+         self.lbbuscar = Label(self.root, text='PESQUISAR', bg=self.lb_bg, fg=self.lb_fg, font=('arial', 10, 'bold'))
+@@ -477,6 +364,7 @@
+ 
+         self.lbagenda = Label(self.root, text='AGENDAMENTO', bg=self.lb_bg, fg=self.lb_fg, font=('arial', 10, 'bold'))
+         self.lbagenda.place(x=975, y=700)
++
+ # Data Formatada
+     def format_data(self, event=None):
+         self.text = self.entry_nascimento.get()[:10]
+@@ -579,3 +467,114 @@
+         self.lista_grid.place(x=22, y=519, width=1240, relheight=0.14)
+ principal()
+ 
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++'''
++
++    def limpar_campos(self):
++        self.entry_codigo.delete(0, END)
++        self.entry_nome.delete(0, END)
++        self.entry_nascimento.delete(0, END)
++        self.entry_civil.delete(0, END)
++        self.entry_religiao.delete(0, END)
++        self.entry_profissao.delete(0, END)
++        self.entry_cidade.delete(0, END)
++        self.entry_estado.delete(0, END)
++        self.entry_dataConsulta.delete(0, END)
++        self.entry_observacao.delete('1.0', END)
++        self.entry_receita.delete('1.0', END)
++        self.entry_anos.delete(0, END)
++        self.entry_telefone.delete(0, END)
++        self.entry_tipo.delete(0, END)
++
++        self.entry_idade = Label(self.root, bg=self.lb_bg)
++        self.entry_idade.place(x=953, y=160, width=75, height=28)
++
++    def db_conect(self):
++        self.conexao = sqlite3.connect('clientes2_db.sqlite3')
++        self.cursor = self.conexao.cursor()
++
++    def db_desconect(self):
++        self.conexao.close()
++
++    def criar_tabela(self):
++        self.db_conect()
++
++        self.cursor.execute("""
++        CREATE TABLE IF NOT EXISTS clientes (
++        id INTEGER PRIMARY KEY AUTOINCREMENT,
++        Nome TEXT NOT NULL,
++        civil TEXT NOT NULL,
++        religiao TEXT NOT NULL,
++        profissao TEXT NOT NULL,
++        cidade TEXT NOT NULL,
++        estado TEXT NOT NULL,
++        telefone TEXT,
++        data TEXT,
++        nascimento TEXT NOT NULL,
++        idade TEXT,
++        tipo TEXT,
++        observacao TEXT NOT NULL,
++        receita TEXT
++        );""");
++
++        self.conexao.commit()
++        self.db_desconect()
++
++    def capturar_campos(self):
++        self.codigo = self.entry_codigo.get()
++        self.nome = self.entry_nome.get()
++        self.civil = self.entry_civil.get()
++        self.religiao = self.entry_religiao.get()
++        self.profissao = self.entry_profissao.get()
++        self.cidade = self.entry_cidade.get()
++        self.estado = self.entry_estado.get()
++        self.telefone = self.entry_telefone.get()
++        self.data = self.entry_dataConsulta.get()
++        self.nascimento = self.entry_nascimento.get()
++        self.tipo = self.entry_tipo.get()
++        self.observacao = self.entry_observacao.get('1.0', END)
++        self.receita = self.entry_receita.get('1.0', END)
++
++    def inserir_dados(self):
++        self.capturar_campos()
++        self.db_conect()
++
++        if self.entry_nome.get() == '':
++            msg = 'É necessário preencher o campo Nome'
++            messagebox.showinfo('Cadastro de Paciente', msg)
++
++        elif self.entry_nascimento.get() == '':
++            msg = 'É necessário preencher o campo data de nascimento'
++            messagebox.showinfo('Cadastro de Paciente', msg)
++
++        else:
++            try:
++                self.db_conect()
++                self.cursor.execute("""INSERT INTO clientes (nome,civil,religiao,profissao,cidade,estado,telefone,data,nascimento,idade,tipo,observacao,receita)
++                VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?) """, (self.nome, self.civil, self.religiao, self.profissao, self.cidade, self.estado, self.telefone, self.data,        self.nascimento, self.idade, self.tipo, self.observacao, self.receita))
++
++                self.conexao.commit()
++                self.db_desconect()
++                self.limpar_campos()
++
++                msg = 'CADASTRO REALIZADO COM SUCESSO'
++                messagebox.showinfo('Cadastro de Paciente', msg)
++            except:
++                msg = 'NECESSÁRIO CLICAR NO BOTÃO NASCIMENTO'
++                messagebox.showinfo('Cadastro de Paciente', msg)
++                self.limpar_campos()
++'''
+\ No newline at end of file
