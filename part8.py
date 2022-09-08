@@ -12,6 +12,7 @@ import base64
 import messagebox
 import os
 
+print()
 root = Tk()
 
 class Funcoes():
