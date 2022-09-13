@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c444efb-5b2b-4970-9f5d-80e17d57ee93" name="Changes" comment="Update part8.py">
-      <change beforePath="$PROJECT_DIR$/part7.py" beforeDir="false" afterPath="$PROJECT_DIR$/part7.py" afterDir="false" />
+    <list default="true" id="8c444efb-5b2b-4970-9f5d-80e17d57ee93" name="Changes" comment="Delete part7.py">
+      <change afterPath="$PROJECT_DIR$/part8.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_08_2022_08_48__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_08_2022_08_48__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientes2_db.sqlite3" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +22,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="CadPaciente &lt;111750769+cadpaciente@users.noreply.github.com&gt;" />
         <option value="GynPython &lt;109635324+gynpython@users.noreply.github.com&gt;" />
       </list>
     </option>
@@ -29,6 +33,7 @@
       </GitPushTagMode>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/part7.py" root0="SKIP_INSPECTION" />
@@ -42,14 +47,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/dev_cadastro_paciente/image&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/dev_cadastro_paciente/image",
+    "settings.editor.selected.configurable": "file.status.colors"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\dev_cadastro_paciente\image" />
@@ -61,7 +66,7 @@
       <recent name="C:\Users\Junior\Documents\CadastroClinico\CLINIC\dev_cadastro_paciente\image" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.lista">
+  <component name="RunManager" selected="Python.part8">
     <configuration name="lista" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="dev_cadastro_paciente" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -169,9 +174,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.lista" />
-        <item itemvalue="Python.part7" />
         <item itemvalue="Python.part8" />
+        <item itemvalue="Python.part7" />
+        <item itemvalue="Python.lista" />
         <item itemvalue="Python.part6" />
         <item itemvalue="Python.part5" />
       </list>
@@ -368,7 +373,21 @@
       <option name="project" value="LOCAL" />
       <updated>1662648452627</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Delete part7.py">
+      <created>1662879683367</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1662879683367</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Delete part7.py">
+      <created>1662879701764</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1662879701764</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -400,9 +419,10 @@
     <MESSAGE value="Update part4.py" />
     <MESSAGE value="Update part5.py" />
     <MESSAGE value="Update part6.py" />
-    <MESSAGE value="Update part7.py" />
     <MESSAGE value="Update part8.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update part8.py" />
+    <MESSAGE value="Update part7.py" />
+    <MESSAGE value="Delete part7.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete part7.py" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>
