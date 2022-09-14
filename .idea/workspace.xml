@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c444efb-5b2b-4970-9f5d-80e17d57ee93" name="Changes" comment="Delete part7.py">
-      <change afterPath="$PROJECT_DIR$/part8.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_08_2022_08_48__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_08_2022_08_48__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientes2_db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/part8.py" beforeDir="false" afterPath="$PROJECT_DIR$/part8.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part9.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,14 +46,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/dev_cadastro_paciente/image",
-    "settings.editor.selected.configurable": "file.status.colors"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/dev_cadastro_paciente/image&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;file.status.colors&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\dev_cadastro_paciente\image" />
@@ -66,7 +65,7 @@
       <recent name="C:\Users\Junior\Documents\CadastroClinico\CLINIC\dev_cadastro_paciente\image" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.part9">
+  <component name="RunManager" selected="Python.part8">
     <configuration name="lista" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="dev_cadastro_paciente" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -88,7 +87,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="part6" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="part10" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="dev_cadastro_paciente" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -100,7 +99,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/part6.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/part10.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -174,11 +173,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.part10" />
         <item itemvalue="Python.part9" />
         <item itemvalue="Python.part8" />
         <item itemvalue="Python.part7" />
         <item itemvalue="Python.lista" />
-        <item itemvalue="Python.part6" />
       </list>
     </recent_temporary>
   </component>

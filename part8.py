@@ -1,5 +1,5 @@
 '''
-MELHORIAS AO INSERIR DADOS,
+MELHORIAS AO INSERIR DADOS, PARTE 1
 '''
 
 from tkinter import *
