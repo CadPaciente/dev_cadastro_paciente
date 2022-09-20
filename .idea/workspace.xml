@@ -65,7 +65,7 @@
       <recent name="C:\Users\Junior\Documents\CadastroClinico\CLINIC\dev_cadastro_paciente\image" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.part10">
+  <component name="RunManager" selected="Python.part9">
     <configuration name="ACENTUAÇÃO" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="dev_cadastro_paciente" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -194,10 +194,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.part9" />
         <item itemvalue="Python.part10" />
         <item itemvalue="Python.top" />
         <item itemvalue="Python.ACENTUAÇÃO" />
-        <item itemvalue="Python.part9" />
         <item itemvalue="Python.part9" />
       </list>
     </recent_temporary>
