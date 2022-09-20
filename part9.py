@@ -116,7 +116,6 @@ class Funcoes():
                 msg = 'PACIENTE JÁ CADASTRADO'
                 messagebox.showwarning('Cadastro de paciente', msg)
                 self.db_desconect()
-                self.limpar_campos()
                 principal()
 
 class principal(Funcoes):
