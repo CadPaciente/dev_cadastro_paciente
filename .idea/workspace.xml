@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c444efb-5b2b-4970-9f5d-80e17d57ee93" name="Changes" comment="Melhorias ao inserir dados - parte 2 part9.py">
-      <change afterPath="$PROJECT_DIR$/part10.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8c444efb-5b2b-4970-9f5d-80e17d57ee93" name="Changes" comment="Melhorias ao inserir dados - parte 2 part9.py" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -194,8 +191,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.part10" />
         <item itemvalue="Python.part9" />
+        <item itemvalue="Python.part10" />
         <item itemvalue="Python.top" />
         <item itemvalue="Python.ACENTUAÇÃO" />
         <item itemvalue="Python.part9" />
@@ -442,7 +439,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663679734263</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Melhorias ao inserir dados - parte 2 part9.py">
+      <created>1663685207817</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1663685207817</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -488,7 +492,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/part9.py</url>
-          <line>474</line>
+          <line>473</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
