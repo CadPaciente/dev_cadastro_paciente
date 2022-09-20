@@ -1,5 +1,5 @@
 '''
-MELHORIAS AO INSERIR DADOS
+MELHORIAS AO INSERIR DADOS - PARTE 2
 '''
 
 from tkinter import *
@@ -110,17 +110,13 @@ class Funcoes():
 
                 msg = 'PACIENTE CADASTRADO'
                 messagebox.showinfo('Cadastro de paciente', msg)
-
                 principal()
 
             except:
                 msg = 'PACIENTE JÁ CADASTRADO'
                 messagebox.showwarning('Cadastro de paciente', msg)
+                self.db_desconect()
                 principal()
-
-
-
-
 
 class principal(Funcoes):
     def __init__(self):
