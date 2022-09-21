@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c444efb-5b2b-4970-9f5d-80e17d57ee93" name="Changes" comment="Melhorias ao inserir dados - parte 2 part9.py">
-      <change afterPath="$PROJECT_DIR$/part10.py" afterDir="false" />
+    <list default="true" id="8c444efb-5b2b-4970-9f5d-80e17d57ee93" name="Changes" comment="CRIAR FUNÇÃO PESQUISAR E FUNÇÃO CLICK  - part10.py">
+      <change afterPath="$PROJECT_DIR$/part11.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +65,7 @@
       <recent name="C:\Users\Junior\Documents\CadastroClinico\CLINIC\dev_cadastro_paciente\image" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.part10">
+  <component name="RunManager" selected="Python.part11">
     <configuration name="ACENTUAÇÃO" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="dev_cadastro_paciente" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -108,7 +108,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="part8" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="part11" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="dev_cadastro_paciente" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -120,7 +120,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/part8.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/part11.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -194,11 +194,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.part11" />
         <item itemvalue="Python.part10" />
         <item itemvalue="Python.part9" />
         <item itemvalue="Python.top" />
         <item itemvalue="Python.ACENTUAÇÃO" />
-        <item itemvalue="Python.part9" />
       </list>
     </recent_temporary>
   </component>
@@ -456,7 +456,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663685715827</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="CRIAR FUNÇÃO PESQUISAR E FUNÇÃO CLICK  - part10.py">
+      <created>1663705452680</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1663705452680</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -494,7 +501,8 @@
     <MESSAGE value="Melhorias ao inserir dados - parte 1 part7.py" />
     <MESSAGE value="Melhorias ao inserir dados - parte 1 part8.py" />
     <MESSAGE value="Melhorias ao inserir dados - parte 2 part9.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Melhorias ao inserir dados - parte 2 part9.py" />
+    <MESSAGE value="CRIAR FUNÇÃO PESQUISAR E FUNÇÃO CLICK  - part10.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="CRIAR FUNÇÃO PESQUISAR E FUNÇÃO CLICK  - part10.py" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="XDebuggerManager">
