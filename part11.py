@@ -1,5 +1,5 @@
 '''
-CRIAR FUNÇÃO PESQUISAR E FUNÇÃO CLICK - PARTE 1
+CRIAR FUNÇÃO PESQUISAR E FUNÇÃO CLICK - PARTE 2
 '''
 
 from tkinter import *
@@ -101,8 +101,8 @@ class Funcoes():
         else:
             try:
                 self.db_conect()
-                self.cursor.execute("""INSERT INTO clientes (nome,civil,religiao,profissao,cidade,estado,telefone,data,nascimento,idade,tipo,observacao,receita)
-                VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?) """, ((self.nome).upper().strip(), self.civil, self.religiao, self.profissao, self.cidade, self.estado, self.telefone, self.data, self.nascimento, self.idade, self.tipo, self.observacao, self.receita))
+                self.cursor.execute("""INSERT INTO clientes (nome,civil,religiao,profissao,cidade,estado,telefone,data,nascimento,idade,tipo,receita,observacao)
+                VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?) """, ((self.nome).upper().strip(), self.civil, self.religiao, self.profissao, self.cidade, self.estado, self.telefone, self.data, self.nascimento, self.idade, self.tipo, self.receita, self.observacao))
 
                 self.conexao.commit()
                 self.db_desconect()
@@ -124,16 +124,36 @@ class Funcoes():
 
         self.lista_grid.delete(*self.lista_grid.get_children())
 
-        nome = '%' + self.entry_nome.get()
+        nome = '%' + self.entry_nome.get().strip()
 
-        self.cursor.execute("""SELECT * FROM clientes WHERE Nome LIKE '%s' COLLATE NOCASE  ORDER BY Nome ASC""" % nome)
-        self.resultado_busca = self.cursor.fetchmany()
+        if self.entry_nome.get() == '':
+            msg = 'FAVOR PREENCHER O CAMPO NOME'
+            messagebox.showwarning('Cadastro de paciente',msg)
 
-        for self.cliente in self.resultado_busca:
-            self.lista_grid.insert("", END, values= self.cliente)
+        else:
+            self.cursor.execute("""SELECT * FROM clientes WHERE Nome LIKE '%s' COLLATE NOCASE  ORDER BY Nome ASC""" % nome)
+            self.resultado_busca = self.cursor.fetchmany()
 
-            self.db_desconect()
-            self.limpar_campos()
+            for self.cliente in self.resultado_busca:
+                self.lista_grid.insert("", END, values= self.cliente)
+
+                self.db_desconect()
+
+                if self.resultado_busca != False:
+                    self.click()
+                    self.db_desconect()
+                    self.limpar_campos()
+            else:
+                self.db_desconect()
+
+                slice = nome[1::].upper()
+
+                msg = f'PACIENTE  "{slice}"  NÃO ESTÁ CADASTRADO'
+                messagebox.showwarning('Cadastro de Paciente', msg)
+
+                self.limpar_campos()
+
+
 
     def click(self, event):
         self.limpar_campos()
@@ -179,7 +199,7 @@ class principal(Funcoes):
         self.lbrevisao1 = StringVar()
         self.lbrevisao1.set('REVISÃO')
 
-        self.entry_tipo = Entry(self.root, bg=self.lb_bg, fg='#ffffff', text=f'{self.lbrevisao1}', font=('arial', 18, 'bold'), relief=FLAT)
+        self.entry_tipo = Entry(self.root, bg=self.lb_bg, fg='#ffffff', textvariable=self.lbrevisao1, font=('arial', 18, 'bold'), relief=FLAT)
         self.entry_tipo.place(x=720, y=380, width=120, height=25)
 
     def btConsulta(self):
@@ -188,7 +208,7 @@ class principal(Funcoes):
         self.lbconsulta1 = StringVar()
         self.lbconsulta1.set('CONSULTA')
 
-        self.entry_tipo = Entry(self.root, bg=self.lb_bg, fg='#ffffff', text=f'{self.lbconsulta1}', font=('arial', 18, 'bold'), relief=FLAT)
+        self.entry_tipo = Entry(self.root, bg=self.lb_bg, fg='#ffffff', textvariable=self.lbconsulta1, font=('arial', 18, 'bold'), relief=FLAT)
         self.entry_tipo.place(x=720, y=380, width=200, height=25)
 
     def btVideo(self):
@@ -197,7 +217,7 @@ class principal(Funcoes):
         self.lbvideo1 = StringVar()
         self.lbvideo1.set('VIRTUAL')
 
-        self.entry_tipo = Entry(self.root, bg=self.lb_bg, fg='#ffffff', text=f'{self.lbvideo1}', font=('arial', 18, 'bold'), relief=FLAT)
+        self.entry_tipo = Entry(self.root, bg=self.lb_bg, fg='#ffffff', textvariable=self.lbvideo1, font=('arial', 18, 'bold'), relief=FLAT)
         self.entry_tipo.place(x=720, y=380, width=200, height=25)
 
     def limpa_receita(self):
@@ -222,11 +242,8 @@ class principal(Funcoes):
         self.et_font = ('arial', 15, 'bold')
 
     def widgets_frame1(self):
-        self.entry_tipo = Entry()
 
         self.entry_anos = Entry()
-
-        self.entry_dataConsulta = Entry()
 
         self.entry_idade = Entry()
 
@@ -344,6 +361,11 @@ class principal(Funcoes):
         self.lb_dataConsulta = Button(self.root, text='Inserir data da consulta', bg=self.bt_bg, fg=self.bt_fg, font=self.bt_font, command=self.data_consulta)
         self.lb_dataConsulta.place(x=730, y=80, width=240, height=28)
 
+        self.entry_dataConsulta = Entry(self.root, bg=self.lb_bg, fg='yellow', font=('arial', 18, 'bold'), relief=FLAT)
+        self.entry_dataConsulta.place(x=780, y=112, width=120, height=35)
+
+
+
 # Entry Data de Nascimento
         self.entry_nascimento = Entry(self.root, font=('arail', 15, 'bold'))
         self.entry_nascimento.bind("<KeyRelease>", self.format_data)
@@ -401,6 +423,10 @@ class principal(Funcoes):
         self.labelRevisao = Label(self.root, text='REVISÃO', bg=self.lb_bg, fg='yellow', font=('arial', 10, 'bold'))
         self.labelRevisao.place(x=175, y=390)
 
+
+        self.entry_tipo = Entry(self.root, bg=self.lb_bg, fg='#ffffff', font=('arial', 18, 'bold'), relief=FLAT)
+        self.entry_tipo.place(x=720, y=380, width=120, height=25)
+
 # Botão Consulta
         from botoes_image import consulta
 
@@ -415,6 +441,9 @@ class principal(Funcoes):
 
         self.labelConsulta = Label(self.root, text='CONSULTA', bg=self.lb_bg, fg='yellow', font=('arial', 10, 'bold'))
         self.labelConsulta.place(x=350, y=390)
+
+        self.entry_tipo = Entry(self.root, bg=self.lb_bg, fg='#ffffff', font=('arial', 18, 'bold'), relief=FLAT)
+        self.entry_tipo.place(x=720, y=380, width=200, height=25)
 
 # Botão Wahtsapp
         from botoes_image import whatsapp
@@ -431,6 +460,9 @@ class principal(Funcoes):
         self.labelVideo = Label(self.root, text='VÍDEO', bg=self.lb_bg, fg='yellow', font=('arial', 10, 'bold'))
         self.labelVideo.place(x=540, y=390)
 
+        self.entry_tipo = Entry(self.root, bg=self.lb_bg, fg='#ffffff', font=('arial', 18, 'bold'), relief=FLAT)
+        self.entry_tipo.place(x=720, y=380, width=200, height=25)
+
 # Botão Limpar
         from botoes_image import limpar
 
@@ -440,7 +472,7 @@ class principal(Funcoes):
         self.bt_limpar1.image = self.bt_limpar
 
         self.bt_limpar = Button(self.root, bg=self.bt_bg, fg=self.bt_fg, image=self.bt_limpar,
-                               activebackground=self.bt_bg, bd=0, highlightthickness=0, command='', relief=FLAT)
+                               activebackground=self.bt_bg, bd=0, highlightthickness=0, command=self.limpar_campos, relief=FLAT)
         self.bt_limpar.place(x=175, y=605, width=80, height=120)
 
         self.lblimpar = Label(self.root, text='LIMPAR TELA', bg=self.lb_bg, fg=self.lb_fg, font=('arial', 10, 'bold'))
@@ -559,7 +591,7 @@ class principal(Funcoes):
             self.TextoLabel = StringVar()
             self.TextoLabel.set(self.dia_atual)
 
-            self.entry_dataConsulta = Entry(self.root, textvariable=f'{self.TextoLabel}', bg=self.lb_bg, fg='yellow', font=('arial', 18, 'bold'), relief=FLAT)
+            self.entry_dataConsulta = Entry(self.root, textvariable=self.TextoLabel, bg=self.lb_bg, fg='yellow', font=('arial', 18, 'bold'), relief=FLAT)
             self.entry_dataConsulta.place(x=780, y=112, width=120, height=35)
 
     def sair(self):
@@ -613,7 +645,7 @@ class principal(Funcoes):
         self.lista_grid.column('#12', width=120)
         self.lista_grid.column('#13', width=150)
         self.lista_grid.column('#14', width=150)
-        self.lista_grid.place(x=22, y=519, width=1240, relheight=0.14)
+        self.lista_grid.place(x=22, y=519, width=1230, relheight=0.14)
         self.lista_grid.bind("<Double-1>", self.click)
 
 principal()

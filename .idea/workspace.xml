@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c444efb-5b2b-4970-9f5d-80e17d57ee93" name="Changes" comment="CRIAR FUNÇÃO PESQUISAR E FUNÇÃO CLICK - PARTE 2 - part11.py">
+    <list default="true" id="8c444efb-5b2b-4970-9f5d-80e17d57ee93" name="Changes" comment="CRIAR FUNÇÃO PESQUISAR E FUNÇÃO CLICK - part10.py">
+      <change afterPath="$PROJECT_DIR$/part11.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part10.py" beforeDir="false" afterPath="$PROJECT_DIR$/part10.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part11.py" beforeDir="false" afterPath="$PROJECT_DIR$/part11.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +34,6 @@
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/part11.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/part7.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -472,7 +470,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663767111188</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="CRIAR FUNÇÃO PESQUISAR E FUNÇÃO CLICK - part10.py">
+      <created>1663863869031</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1663863869031</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -512,7 +517,8 @@
     <MESSAGE value="Melhorias ao inserir dados - parte 2 part9.py" />
     <MESSAGE value="CRIAR FUNÇÃO PESQUISAR E FUNÇÃO CLICK  - part10.py" />
     <MESSAGE value="CRIAR FUNÇÃO PESQUISAR E FUNÇÃO CLICK - PARTE 2 - part11.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="CRIAR FUNÇÃO PESQUISAR E FUNÇÃO CLICK - PARTE 2 - part11.py" />
+    <MESSAGE value="CRIAR FUNÇÃO PESQUISAR E FUNÇÃO CLICK - part10.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="CRIAR FUNÇÃO PESQUISAR E FUNÇÃO CLICK - part10.py" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="XDebuggerManager">
