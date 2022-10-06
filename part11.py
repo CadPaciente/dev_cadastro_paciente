@@ -15,7 +15,6 @@ import base64
 root = Tk()
 
 class Funcoes():
-
     def limpar_campos(self):
         self.entry_codigo.delete(0, END)
         self.entry_nome.delete(0, END)
