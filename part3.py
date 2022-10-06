@@ -21,24 +21,24 @@ class principal():
         self.grid_cliente2()
 
         root.mainloop()
-
+# Tela Principal
     def tela(self):
         self.root.configure(bg='#008888')
         self.root.geometry("1366x768+0+0")
         self.root.overrideredirect(True)
 
     def cor_widgets(self):
-        # Botões
+# Botões
         self.bt_bg = '#008888'
         self.bt_fg = 'white'
         self.bt_font = ('verdana', 13, 'bold')
 
-        # Label
+# Label
         self.lb_bg = '#008888'
         self.lb_fg = 'white'
         self.lb_font = ('arial', 15, 'bold')
 
-        # Entrada de dados
+# Entrada de dados
         self.et_bg = '#008888'
         self.et_bg_branco = 'white'
         self.et_fg_branco = "#ffffff"
@@ -242,5 +242,6 @@ class principal():
         self.lista_grid.column('#13', width=150)
         self.lista_grid.column('#14', width=150)
         self.lista_grid.place(x=22, y=519, width=1240, relheight=0.14)
+
 principal()
 
