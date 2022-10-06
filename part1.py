@@ -15,7 +15,8 @@ class principa():
 
         root.mainloop()
 
-    def tela(self):
+# Tela principal
+        def tela(self):
         self.root.title("PACIENTE")
         self.root.configure(bg='#008888')
         self.root.geometry("1366x768+0+0")
