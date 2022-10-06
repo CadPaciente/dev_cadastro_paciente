@@ -577,5 +577,6 @@ class principal(Funcoes):
         self.lista_grid.column('#13', width=150)
         self.lista_grid.column('#14', width=150)
         self.lista_grid.place(x=22, y=519, width=1240, relheight=0.14)
+        
 principal()
 
