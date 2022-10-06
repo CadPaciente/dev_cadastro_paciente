@@ -718,6 +718,5 @@ class principal(Funcoes):
         filemenu3.add_command(label='Gmail', command='')
         filemenu3.add_command(label='Terra', command='')
 
-
 principal()
 
