@@ -598,6 +598,7 @@ class principal(Funcoes):
         #self.lista_grid.heading('#13', text='CÓDIGO')
         #self.lista_grid.heading('#14', text='CÓDIGO')
 
+        
         self.lista_grid.column('#0', width=0)
         self.lista_grid.column('#1', width=60)
         self.lista_grid.column('#2', width=120)
