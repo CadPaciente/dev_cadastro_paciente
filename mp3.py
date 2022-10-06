@@ -1,3 +1,7 @@
+'''
+NECESSÁRIO COLOCAR O ENDEREÇO DO ARQUIVO MP3 DA SUA MÁQUINA PARA CADA FUNÇÃO
+'''
+
 import pygame
 
 def tears():
