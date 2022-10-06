@@ -1,5 +1,5 @@
 '''
-FINALIZANDO OS BOTÕES PNG COM A BASE 64 E COLOCANDO A '/' AUTOMATICA NA DATA DE NASCIMENTO
+FUÇÃO DATA CONSULTA, SAIR E TREVIEW 1 E 2
 '''
 
 from tkinter import *
@@ -24,11 +24,13 @@ class principal():
 
         root.mainloop()
 
+# Tela Principal 
     def tela(self):
         self.root.configure(bg='#008888')
         self.root.geometry("1366x768+0+0")
         self.root.overrideredirect(True)
 
+# Fução botão Revisão
     def btRevisao(self):
         self.entry_tipo.destroy()
 
@@ -38,7 +40,7 @@ class principal():
         self.entry_tipo = Entry(self.root, bg=self.lb_bg, fg='#ffffff', text=f'{self.lbrevisao1}', font=('arial', 18, 'bold'), relief=FLAT)
         self.entry_tipo.place(x=720, y=380, width=120, height=25)
 
-
+# Fução botão Consultas
     def btConsulta(self):
         self.entry_tipo.destroy()
 
@@ -48,6 +50,7 @@ class principal():
         self.entry_tipo = Entry(self.root, bg=self.lb_bg, fg='#ffffff', text=f'{self.lbconsulta1}', font=('arial', 18, 'bold'), relief=FLAT)
         self.entry_tipo.place(x=720, y=380, width=200, height=25)
 
+ # Fução botão Vídeo
     def btVideo(self):
         self.entry_tipo.destroy()
 
@@ -57,36 +60,37 @@ class principal():
         self.entry_tipo = Entry(self.root, bg=self.lb_bg, fg='#ffffff', text=f'{self.lbvideo1}', font=('arial', 18, 'bold'), relief=FLAT)
         self.entry_tipo.place(x=720, y=380, width=200, height=25)
 
+# Fução Limpar Receita
     def limpa_receita(self):
         self.entry_receita.delete('1.0', END)
 
+# Função cor dos widgets
     def cor_widgets(self):
         # Botões
         self.bt_bg = '#008888'
         self.bt_fg = 'white'
         self.bt_font = ('verdana', 13, 'bold')
 
-        # Label
+# Label
         self.lb_bg = '#008888'
         self.lb_fg = 'white'
         self.lb_font = ('arial', 15, 'bold')
 
-        # Entrada de dados
+# Entrada de dados
         self.et_bg = '#008888'
         self.et_bg_branco = 'white'
         self.et_fg_branco = "#ffffff"
         self.et_fg_preto = '#000000'
         self.et_font = ('arial', 15, 'bold')
 
+# Função Widgets
     def widgets_frame1(self):
         self.entry_tipo = Entry()
-
 
 # Data Local
         self.dia_atual = (datetime.today().strftime('Goiânia, %d de %B de %Y'))
         self.hj = Label(self.root, text=f'{self.dia_atual}', bg=self.lb_bg, fg=self.lb_fg, font=('arail', 10, 'bold'))
         self.hj.place(x=0, y=0, width=220, height=51)
-
 
 # Label Nome PACIENTE tela principal
         self.lb_cadastro = Label(self.root, text='P  A  C  I  E  N  T  E', bg=self.lb_bg, fg=self.lb_fg, font=('arial black', 40, 'bold'))
@@ -326,7 +330,6 @@ class principal():
         self.lbnovo = Label(self.root, text='CADASTRAR', bg=self.lb_bg, fg=self.lb_fg, font=('arial', 10, 'bold'))
         self.lbnovo.place(x=585, y=695)
 
-
 # Botão Alterar
         from botoes_image import medico
 
@@ -341,7 +344,6 @@ class principal():
 
         self.lbalterar = Label(self.root, text='ALTERAR', bg=self.lb_bg, fg=self.lb_fg, font=('arial', 10, 'bold'))
         self.lbalterar.place(x=797, y=700)
-
 
 # Botão Agendamento
         from botoes_image import agenda
@@ -358,6 +360,7 @@ class principal():
         self.lbagenda = Label(self.root, text='AGENDAMENTO', bg=self.lb_bg, fg=self.lb_fg, font=('arial', 10, 'bold'))
         self.lbagenda.place(x=975, y=700)
 
+# Data da Consulta
     def data_consulta(self):
             self.dia_atual = (datetime.today().strftime('%d/%m/%Y'))
             self.TextoLabel = StringVar()
@@ -366,10 +369,12 @@ class principal():
             self.entry_dataConsulta = Entry(self.root, textvariable=f'{self.TextoLabel}', bg=self.lb_bg, fg='yellow', font=('arial', 18, 'bold'), relief=FLAT)
             self.entry_dataConsulta.place(x=780, y=112, width=120, height=35)
 
+# Sair
     def sair(self):
         self.root.destroy()
         sys.exit()
 
+# Treeview2
     def grid_cliente2(self):
         self.lista_grid2 = ttk.Treeview(self.root, columns=('col1', 'col2'))
 
@@ -384,6 +389,7 @@ class principal():
         self.delete_grid2 = Button(self.root, text='DELETAR ITEM', bg='red', fg='#ffffff', font=('arial', 10, 'bold'), command='')
         self.delete_grid2.place(x=1055, y=378, width=210, height=35)
 
+# Triview 1
     def grid_cliente(self):
         self.lista_grid = ttk.Treeview(self.root, columns=('col1', 'col2', 'col3','col4', 'col5', 'col6','col7', 'col8', 'col9','col10', 'col11', 'col12', 'col13', 'col14'))
 
@@ -418,5 +424,6 @@ class principal():
         self.lista_grid.column('#13', width=150)
         self.lista_grid.column('#14', width=150)
         self.lista_grid.place(x=22, y=519, width=1240, relheight=0.14)
+
 principal()
 
