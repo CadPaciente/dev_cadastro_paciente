@@ -671,5 +671,6 @@ class principal(Funcoes):
         self.lista_grid.place(x=22, y=519, width=1230, relheight=0.14)
         self.lista_grid.bind("<Double-1>", self.click)
 
+
 principal()
 
