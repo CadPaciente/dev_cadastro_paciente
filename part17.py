@@ -35,6 +35,7 @@ class Funcoes():
         dia TEXT NOT NULL UNIQUE,
         telefone TEXT);""")
 
+        
         self.conexao.commit()
         self.desconect_db_consultas()
 
