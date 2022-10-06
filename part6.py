@@ -1,4 +1,5 @@
 '''
+FUNÇÃO FORMATAR DATA E FUNÇÃO MOSTRAR IDADE
 '''
 
 from tkinter import *
@@ -68,18 +69,19 @@ class principal():
         self.bt_fg = 'white'
         self.bt_font = ('verdana', 13, 'bold')
 
-        # Label
+# Label
         self.lb_bg = '#008888'
         self.lb_fg = 'white'
         self.lb_font = ('arial', 15, 'bold')
 
-        # Entrada de dados
+# Entrada de dados
         self.et_bg = '#008888'
         self.et_bg_branco = 'white'
         self.et_fg_branco = "#ffffff"
         self.et_fg_preto = '#000000'
         self.et_font = ('arial', 15, 'bold')
 
+# Widgets
     def widgets_frame1(self):
         self.entry_tipo = Entry()
         self.entry_tipo.place()
@@ -90,7 +92,6 @@ class principal():
         self.dia_atual = (datetime.today().strftime('Goiânia, %d de %B de %Y'))
         self.hj = Label(self.root, text=f'{self.dia_atual}', bg=self.lb_bg, fg=self.lb_fg, font=('arail', 10, 'bold'))
         self.hj.place(x=0, y=0, width=220, height=51)
-
 
 # Label Nome PACIENTE tela principal
         self.lb_cadastro = Label(self.root, text='P  A  C  I  E  N  T  E', bg=self.lb_bg, fg=self.lb_fg, font=('arial black', 40, 'bold'))
@@ -330,7 +331,6 @@ class principal():
         self.lbnovo = Label(self.root, text='CADASTRAR', bg=self.lb_bg, fg=self.lb_fg, font=('arial', 10, 'bold'))
         self.lbnovo.place(x=585, y=695)
 
-
 # Botão Alterar
         from botoes_image import medico
 
@@ -360,6 +360,7 @@ class principal():
 
         self.lbagenda = Label(self.root, text='AGENDAMENTO', bg=self.lb_bg, fg=self.lb_fg, font=('arial', 10, 'bold'))
         self.lbagenda.place(x=975, y=700)
+
 # Data Formatada
     def format_data(self, event=None):
         self.text = self.entry_nascimento.get()[:10]
@@ -377,6 +378,7 @@ class principal():
         self.entry_nascimento.delete(0, "end")
         self.entry_nascimento.insert(0, self.new_text)
 
+# Mostrar Idade  
     def mostra_idade(self):
             try:
                 dataNasc = self.entry_nascimento.get()
@@ -408,10 +410,12 @@ class principal():
             self.entry_dataConsulta = Entry(self.root, textvariable=f'{self.TextoLabel}', bg=self.lb_bg, fg='yellow', font=('arial', 18, 'bold'), relief=FLAT)
             self.entry_dataConsulta.place(x=780, y=112, width=120, height=35)
 
+# Sair
     def sair(self):
         self.root.destroy()
         sys.exit()
 
+# Treeview 2
     def grid_cliente2(self):
         self.lista_grid2 = ttk.Treeview(self.root, columns=('col1', 'col2'))
 
@@ -426,6 +430,7 @@ class principal():
         self.delete_grid2 = Button(self.root, text='DELETAR ITEM', bg='red', fg='#ffffff', font=('arial', 10, 'bold'), command='')
         self.delete_grid2.place(x=1055, y=378, width=210, height=35)
 
+# Treeview 1
     def grid_cliente(self):
         self.lista_grid = ttk.Treeview(self.root, columns=('col1', 'col2', 'col3','col4', 'col5', 'col6','col7', 'col8', 'col9','col10', 'col11', 'col12', 'col13', 'col14'))
 
@@ -460,5 +465,6 @@ class principal():
         self.lista_grid.column('#13', width=150)
         self.lista_grid.column('#14', width=150)
         self.lista_grid.place(x=22, y=519, width=1240, relheight=0.14)
+
 principal()
 
