@@ -18,7 +18,7 @@ class principa():
 
         root.mainloop()
         
-# Tela principal
+# Tela principal 
     def tela(self):
         self.root.configure(bg='#008888')
         self.root.geometry("1366x768+0+0")
