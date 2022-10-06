@@ -32,6 +32,7 @@ class Funcoes():
         self.entry_telefone.delete(0, END)
         self.entry_tipo.delete(0, END)
 
+        
         self.entry_idade2 = Label(self.root, bg=self.lb_bg)
         self.entry_idade2.place(x=953, y=160, width=85, height=28)
 
