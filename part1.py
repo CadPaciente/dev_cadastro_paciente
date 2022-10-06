@@ -1,5 +1,5 @@
 '''
-CRIANDO A TELA PRINCIPAR COM AS LABELS
+CRIANDO A TELA PRINCIPAR
 '''
 
 from tkinter import *
